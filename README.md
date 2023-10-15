@@ -1,8 +1,8 @@
 # PortWhisper 2.0 - Silvester-Überraschung!
-Wir freuen uns, die bevorstehende Veröffentlichung von PortWhisper 2.0 am Silvester ankündigen zu können. Diese Version markiert nicht nur ein neues Jahr, sondern auch einen bedeutenden Schritt nach vorn in der Evolution unseres Projekts.
+- Wir freuen uns, die bevorstehende Veröffentlichung von PortWhisper 2.0 am Silvester ankündigen zu können. Diese Version markiert nicht nur ein neues Jahr, sondern auch einen bedeutenden Schritt nach vorn in der Evolution unseres Projekts.
 
 # Was erwartet dich?
-PortWhisper 2.0 wird nicht nur mit aufregenden neuen Funktionen aufwarten, sondern auch einen vollkommen neuen Stil einführen. Unser Team hat hart daran gearbeitet, das Benutzererlebnis zu verbessern und gleichzeitig die Leistung und Stabilität zu steigern. Wir haben zugehört, Feedback von unserer Community aufgenommen und sind stolz darauf, die Ergebnisse dieser Arbeit präsentieren zu können.
+- PortWhisper 2.0 wird nicht nur mit aufregenden neuen Funktionen aufwarten, sondern auch einen vollkommen neuen Stil einführen. Unser Team hat hart daran gearbeitet, das Benutzererlebnis zu verbessern und gleichzeitig die Leistung und Stabilität zu steigern. Wir haben zugehört, Feedback von unserer Community aufgenommen und sind stolz darauf, die Ergebnisse dieser Arbeit präsentieren zu können.
 
 Einblick in die Neuerungen
 Neues Design: Das Erscheinungsbild von PortWhisper wurde von Grund auf überarbeitet, um moderner, intuitiver und ansprechender zu sein. Wir haben unsergesamtes Designkonzept erneuert, um sicherzustellen, dass Benutzerfreundlichkeit an erster Stelle steht.
