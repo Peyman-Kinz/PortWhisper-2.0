@@ -18,7 +18,6 @@ import requests
 import whois
 from scapy.all import sniff
 import ipaddress
-import nmap
 import pyshark
 
 scan_cancelled = False
