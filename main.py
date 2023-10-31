@@ -20,9 +20,6 @@
 # Bedingung 6: Anwendbares Recht
 # Diese Lizenz unterliegt dem Recht des Landes, in dem der Urheberrechtsinhaber seinen Sitz hat, und alle Streitigkeiten im Zusammenhang mit dieser Lizenz unterliegen der ausschließlichen Zuständigkeit der Gerichte dieses Landes.
 
-# ----------------------------------------------------- #
-
-
 from PIL import Image, ImageTk
 import tkinter as tk
 from tkinter import ttk
