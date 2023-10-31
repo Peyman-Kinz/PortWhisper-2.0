@@ -1,11 +1,27 @@
 # Copyright (c) [2023] [Peyman Kinz]
 #
 # Hiermit wird unentgeltlich jeder Person, die eine Kopie der Software und der zugehörigen Dokumentationen (die "Software") erhält, die Erlaubnis erteilt, sie uneingeschränkt zu nutzen, einschließlich und ohne Ausnahme mit dem Recht, sie zu verwenden, zu kopieren, zu ändern, zusammenzuführen, zu verlegen, zu verbreiten, zu unterlizenzieren und/oder zu verkaufen, und Personen, denen diese Software überlassen wird, diese Rechte zu verschaffen, unter den folgenden Bedingungen:
-#
-# Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind in allen Kopien oder Teilkopien der Software beizulegen.
-#
-# DIE SOFTWARE WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTELLT, EINSCHLIEßLICH DER GARANTIE ZUR BENUTZUNG FÜR DEN VORGESEHENEN ODER EINEM BESTIMMTEN ZWECK SOWIE JEGLICHER RECHTSVERLETZUNG, JEDOCH NICHT DARAUF BESCHRÄNKT. IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHT-INHABER FÜR JEGLICHEN SCHADEN ODER SONSTIGE ANSPRÜCHE HAFTBAR ZU MACHEN, OB INFOLGE DER ERFÜLLUNG VON EINEM VERTRAG, EINER UNERLAUBTEN HANDLUNG ODER ANDERWEITIG, DIE AUS ODER IM ZUSAMMENHANG MIT DER SOFTWARE ODER DER BENUTZUNG ODER ANDEREN EINSATZ DER SOFTWARE ENTSTEHEN.
+
+# Bedingung 1: Urheberrechtsvermerk
+# Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind in allen Kopien oder Teilkopien der Software beizufügen.
+
+# Bedingung 2: Keine Gewährleistung
+# DIE SOFTWARE WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTELLT, EINSCHLIESSLICH DER GARANTIE ZUR BENUTZUNG FÜR DEN VORGESEHENEN ODER EINEM BESTIMMTEN ZWECK SOWIE JEGLICHER RECHTSVERLETZUNG, JEDOCH NICHT DARAUF BESCHRÄNKT.
+
+# Bedingung 3: Haftungsausschluss
+# IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHT-INHABER FÜR JEGLICHEN SCHADEN ODER SONSTIGE ANSPRÜCHE HAFTBAR ZU MACHEN, OB INFOLGE DER ERFÜLLUNG VON EINEM VERTRAG, EINER UNERLAUBTEN HANDLUNG ODER ANDERWEITIG, DIE AUS ODER IM ZUSAMMENHANG MIT DER SOFTWARE ODER DER BENUTZUNG ODER ANDEREN EINSATZ DER SOFTWARE ENTSTEHEN.
+
+# Bedingung 4: Verbreitung
+# Bei der Verbreitung der Software ist es erforderlich, den obigen Urheberrechtsvermerk und diesen Erlaubnisvermerk in der Dokumentation und auf angemessene Weise im Zusammenhang mit der Software beizufügen.
+
+# Bedingung 5: Unterlizenzierung und Verkauf
+# Jeder, dem die Software unter Lizenz überlassen wird, hat das Recht, die gleichen Nutzungsrechte und die Erlaubnis zur Unterlizenzierung und zum Verkauf der Software unter denselben Bedingungen wie in dieser Lizenz festgelegt.
+
+# Bedingung 6: Anwendbares Recht
+# Diese Lizenz unterliegt dem Recht des Landes, in dem der Urheberrechtsinhaber seinen Sitz hat, und alle Streitigkeiten im Zusammenhang mit dieser Lizenz unterliegen der ausschließlichen Zuständigkeit der Gerichte dieses Landes.
+
 # ----------------------------------------------------- #
+
 
 from PIL import Image, ImageTk
 import tkinter as tk
