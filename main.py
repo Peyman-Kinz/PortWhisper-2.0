@@ -32,6 +32,7 @@ import whois
 from scapy.all import sniff
 import ipaddress
 import pyshark
+import nmap
 
 scan_cancelled = False
 
