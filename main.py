@@ -14,12 +14,6 @@
 # Bedingung 4: Verbreitung
 # Bei der Verbreitung der Software ist es erforderlich, den obigen Urheberrechtsvermerk und diesen Erlaubnisvermerk in der Dokumentation und auf angemessene Weise im Zusammenhang mit der Software beizufügen.
 
-# Bedingung 5: Unterlizenzierung und Verkauf
-# Jeder, dem die Software unter Lizenz überlassen wird, hat das Recht, die gleichen Nutzungsrechte und die Erlaubnis zur Unterlizenzierung und zum Verkauf der Software unter denselben Bedingungen wie in dieser Lizenz festgelegt.
-
-# Bedingung 6: Anwendbares Recht
-# Diese Lizenz unterliegt dem Recht des Landes, in dem der Urheberrechtsinhaber seinen Sitz hat, und alle Streitigkeiten im Zusammenhang mit dieser Lizenz unterliegen der ausschließlichen Zuständigkeit der Gerichte dieses Landes.
-
 from PIL import Image, ImageTk
 import tkinter as tk
 from tkinter import ttk
@@ -39,8 +33,11 @@ scan_cancelled = False
 user_credentials = {
     "user1": "password1",
     "user2": "password2",
-    "user3": "password3"
+    "user3": "password3",
+    "user4": "password4",
+    "user5": "password5",
 }
+
 
 # Globale Variable, um den Zugriff auf das Tool zu steuern
 access_granted = False
@@ -111,6 +108,7 @@ error_label = ttk.Label(frame, text="", foreground="red")
 error_label.grid(row=3, column=0, columnspan=2)
 
 # Registrierungsseite
+# Registrierungsseite
 register_frame = ttk.Frame(notebook)
 notebook.add(register_frame, text="Registration")
 
@@ -119,21 +117,25 @@ frame = ttk.Frame(register_frame)
 frame.grid(row=0, column=0)
 
 # Benutzername und Passwort Eingabefelder für die Registrierung
-register_username_label = ttk.Label(frame, text="Benutzername:")
+register_username_label = ttk.Label(frame, text="Benutzername:", font=("Helvetica", 14))
 register_username_label.grid(row=0, column=0, sticky="w")
-register_username_entry = ttk.Entry(frame)
+register_username_entry = ttk.Entry(frame, font=("Helvetica", 12))
 register_username_entry.grid(row=0, column=1)
 
-register_password_label = ttk.Label(frame, text="Passwort:")
+register_password_label = ttk.Label(frame, text="Passwort:", font=("Helvetica", 14))
 register_password_label.grid(row=1, column=0, sticky="w")
-register_password_entry = ttk.Entry(frame, show="*")  # Passwortfeld, zeigt Sternchen
+register_password_entry = ttk.Entry(frame, show="*", font=("Helvetica", 12))  # Passwortfeld, zeigt Sternchen
 register_password_entry.grid(row=1, column=1)
 
-register_button = ttk.Button(frame, text="Registrieren", command=register)
+register_button = ttk.Button(frame, text="Registrieren", command=register, style="C.TButton")
 register_button.grid(row=2, column=0, columnspan=2)
 
-registration_success_label = ttk.Label(frame, text="")
+registration_success_label = ttk.Label(frame, text="", font=("Helvetica", 14))
 registration_success_label.grid(row=3, column=0, columnspan=2)
+
+# Erstelle einen neuen Stil (Style) für die Schaltfläche
+style = ttk.Style()
+style.configure("C.TButton", foreground="white", background="blue", font=("Helvetica", 12))
 
 main_window.mainloop()
 
@@ -336,11 +338,11 @@ resolve_button = tk.Button(button_frame, text="Hostname auflösen", command=reso
 resolve_button.pack(side=tk.LEFT, padx=10)
 
 # Textfeld für die Ergebnisse des Port-Scans
-result_text = tk.Text(main_frame,  font=("Helvetica Bold", 12))
+result_text = tk.Text(main_frame, font=("Helvetica Bold", 12))
 result_text.pack(padx=20, pady=20, fill='both', expand=True)
-result_text.tag_configure("open", foreground="gray")
-result_text.tag_configure("closed", foreground="gray")
-result_text.tag_configure("timeout", foreground="gray")
+result_text.tag_configure("open", foreground="green")  # Farbe für offene Ports
+result_text.tag_configure("closed", foreground="red")  # Farbe für geschlossene Ports
+result_text.tag_configure("timeout", foreground="orange")  # Farbe für nicht antwortende Ports
 
 # Einstellungsframe für den Scan-Typ
 settings_label = tk.Label(settings_frame, text="Einstellungen", font=("Helvetica", 24))
@@ -494,6 +496,5 @@ def perform_network_mapping():
 
 style.theme_use("default")
 
+
 root.mainloop()
-
-
