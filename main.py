@@ -27,6 +27,8 @@ from scapy.all import sniff
 import ipaddress
 import pyshark
 import nmap
+from scapy.all import sniff, IP, TCP
+
 
 scan_cancelled = False
 
@@ -289,7 +291,7 @@ style = ttk.Style()
 style.configure("Main.TFrame", background="#c0c0c0")  # Hier können Sie die gewünschte Hintergrundfarbe definieren
 
 main_frame = ttk.Frame(notebook, style="Main.TFrame")  # Weisen Sie dem Frame den definierten Stil zu
-notebook.add(main_frame, text="Scan Ports")
+notebook.add(main_frame, text="Port Reconnaissance")
 traffic_route_frame = ttk.Frame(notebook)
 notebook.add(traffic_route_frame, text="Traffic Route")
 
@@ -496,5 +498,44 @@ def perform_network_mapping():
 
 style.theme_use("default")
 
+nip_entry = tk.Entry(traffic_route_frame, font=("Helvetica", 12))
+ip_entry.pack_forget()
+
+network_mapping_frame = ttk.Frame(notebook)
+notebook.add(network_mapping_frame, text="Network Mapping")
+
+# Add a new text widget for live traffic monitoring results
+live_traffic_result_text = tk.Text(network_mapping_frame, font=("Helvetica", 12))
+live_traffic_result_text.pack(padx=20, pady=20, fill='both', expand=True)
+
+
+# Modify the live_traffic_monitor function to take the target IP as a parameter
+def live_traffic_monitor(target_ip):
+    def packet_handler(packet):
+        if IP in packet and TCP in packet:
+            source_ip = packet[IP].src
+            destination_ip = packet[IP].dst
+            source_port = packet[TCP].sport
+            destination_port = packet[TCP].dport
+
+            live_traffic_result_text.insert(tk.END, f"Source IP: {source_ip}, Source Port: {source_port}\n")
+            live_traffic_result_text.insert(tk.END, f"Destination IP: {destination_ip}, Destination Port: {destination_port}\n")
+            live_traffic_result_text.insert(tk.END, "--------------------------\n")
+
+    live_traffic_result_text.delete("1.0", tk.END)
+    live_traffic_result_text.insert(tk.END, f"Live Traffic Monitoring for {target_ip}...\n")
+    sniff(filter=f"host {target_ip}", prn=packet_handler, store=0)
+
+
+# Add an entry field for the target IP in the "Network Mapping" tab
+target_ip_label = tk.Label(network_mapping_frame, text="Ziel-IP-Adresse eingeben:", font=("Helvetica", 14))
+target_ip_label.pack(padx=20, pady=10)
+
+target_ip_entry = tk.Entry(network_mapping_frame, font=("Helvetica", 12))
+target_ip_entry.pack(padx=20, pady=10)
+
+# Modify the button to pass the target IP to the live_traffic_monitor function
+network_mapping_button = tk.Button(network_mapping_frame, text="Start Live Traffic Monitor", command=lambda: live_traffic_monitor(target_ip_entry.get()), bg="blue", fg="white")
+network_mapping_button.pack(padx=20, pady=10)
 
 root.mainloop()
