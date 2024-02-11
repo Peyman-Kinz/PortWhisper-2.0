@@ -1,2 +1,1 @@
-Update 23.12.23
-Nächstes Update 2.2.24
+Kommendes Update, am 20.2.24
